@@ -1,0 +1,130 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  .top_project_cnt {
+    @include d-flex(center, space-between);
+    h1 {
+      @include h1-text;
+    }
+    .btn {
+      @include btn;
+      position: relative;
+      &::after {
+        @include button-border;
+      }
+      &:hover {
+        color: $color-green;
+      }
+    }
+  }
+}
+.projects_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 69px 30px;
+  .project_content {
+    h4 {
+      @include h1-text(24px, 32px, 0);
+      margin: 20px 0 7px;
+    }
+    .used_languages {
+      display: flex;
+      gap: 18px;
+      p {
+        @include p-text;
+      }
+    }
+  }
+}
+.project_bakcground {
+  position: relative;
+
+  .project_btns {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    gap: 48px;
+    z-index: 100;
+    .btn {
+      @include btn;
+      position: relative;
+      z-index: 100;
+      &::after {
+        @include button-border;
+      }
+      &:hover {
+        color: $color-green;
+      }
+    }
+  }
+  &:hover {
+    img {
+      opacity: 0.2;
+    }
+    .project_btns {
+      @include d-flex(center, center, column);
+    }
+  }
+}
+.project_btns_box {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .projects {
+    gap: 60px;
+    .top_project_cnt {
+      h1 {
+        font-size: 72px;
+        line-height: 72px; /* 100% */
+        letter-spacing: -2.045px;
+      }
+    }
+  }
+  .project_bakcground:hover {
+    img {
+      opacity: 1;
+    }
+    .project_btns {
+      display: none;
+    }
+  }
+  .project_btns_box{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    button{
+      @include btn;
+      position: relative;
+     &::after{
+      @include button-border;
+     }
+     &:hover{
+      color: $color-green;
+     }
+    }
+  }
+  .projects_box{
+    row-gap: 60px;
+  }
+}
+@media screen and (max-width: 620px){
+.projects{
+  gap: 40px;
+  .top_project_cnt{
+    h1{
+font-size: 40px;
+line-height: 40px; /* 100% */
+letter-spacing: -1.136px;
+    }
+  }
+}
+.projects_box{
+  grid-template-columns: repeat(1,1fr);
+  row-gap: 40px;
+}
+}

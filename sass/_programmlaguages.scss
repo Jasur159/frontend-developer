@@ -1,0 +1,125 @@
+main {
+  padding: 65px 0 140px;
+  position: relative;
+}
+.platform_experience {
+  padding: 72px 0 0;
+  border-top: 1px solid $color-white;
+  display: grid;
+  row-gap: 58px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 140px;
+  .experience_box {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 14px;
+    h2 {
+      @include h1-text(48px, 56px, -1.5px);
+    }
+    p {
+      @include p-text;
+    }
+  }
+}
+.circle_main_2 {
+  width: 570px;
+  height: 80px;
+  position: absolute;
+  border: 1px solid $color-white;
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.3;
+  right: -15%;
+}
+.circle_6 {
+  top: 14%;
+}
+.circle_7 {
+  top: 14.5%;
+}
+.circle_8 {
+  top: 15%;
+}
+.circle_9 {
+  top: 15.5%;
+}
+.circle_10 {
+  top: 16%;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 47px 0 100px;
+  }
+  .platform_experience {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 52px;
+    margin-bottom: 100px;
+    padding-top: 52px;
+  }
+  .circle_main_2 {
+    right: -45%;
+  }
+  .circle_6 {
+    top: 21%;
+  }
+  .circle_7 {
+    top: 21.5%;
+  }
+  .circle_8 {
+    top: 22%;
+  }
+  .circle_9 {
+    top: 22.5%;
+  }
+  .circle_10 {
+    top: 23%;
+  }
+}
+@media screen and (max-width: 610px) {
+  main {
+    padding: 92px 0 80px;
+  }
+  .platform_experience {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 40px 0;
+    row-gap: 24px;
+    margin-bottom: 80px;
+    border-bottom: 1px solid $color-white;
+    .experience_box {
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        color: var(--White, #fff);
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px; /* 125% */
+        letter-spacing: -1px;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 26px; /* 162.5% */
+      }
+    }
+  }
+  .circle_main_2 {
+    right: -105%;
+  }
+  .circle_6 {
+    top: 20%;
+  }
+  .circle_7 {
+    top: 20.3%;
+  }
+  .circle_8 {
+    top: 20.6%;
+  }
+  .circle_9 {
+    top: 20.9%;
+  }
+  .circle_10 {
+    top: 21.2%;
+  }
+}

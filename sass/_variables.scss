@@ -1,0 +1,44 @@
+$color-white: #fff;
+$color-text-p: #d9d9d9;
+$body-color: #151515;
+$footer-color: #242424;
+$color-green: #4ee1a0;
+
+@mixin h1-text($font-size: 88px, $line-height: 100%, $letter-spacing: -2.5px) {
+  color: $color-white;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+@mixin p-text($font-size: 18px, $line-height: 155.556%) {
+  color: $color-text-p;
+
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: $line-height;
+}
+@mixin btn($color: $color-white) {
+  color: $color;
+  font-weight: 700;
+  line-height: 162.5%;
+  letter-spacing: 2.286px;
+  background-color: transparent;
+  padding-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+@mixin d-flex($align: center, $justify: center, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+@mixin button-border {
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-green;
+  position: absolute;
+}
